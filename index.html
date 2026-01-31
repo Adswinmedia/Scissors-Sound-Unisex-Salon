@@ -350,9 +350,9 @@
      <div class="flex justify-between items-center h-16"><a href="#home" class="flex items-center gap-2"> <span class="text-gold text-2xl">✂️</span> <span id="nav-logo" class="font-display text-xl font-semibold text-white">Scissors Sound</span> </a>
       <div class="hidden md:flex items-center gap-6"><a href="#home" class="text-sm text-gray-300 hover:text-gold transition-colors">Home</a> <a href="#about" class="text-sm text-gray-300 hover:text-gold transition-colors">About</a> <a href="#services" class="text-sm text-gray-300 hover:text-gold transition-colors">Services</a> <a href="#contact" class="text-sm text-gray-300 hover:text-gold transition-colors">Contact</a> <button onclick="bookService('Quick Booking')" class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold text-gray-900">Book Now</button>
       </div><button id="mobile-menu-btn" class="md:hidden text-gold p-2 -mr-2" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-       <svg id="menu-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+       <svg id="menu-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
        </svg>
-       <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+       <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
        </svg></button>
      </div>
     </div>
@@ -427,7 +427,7 @@
        <div class="p-6">
         <h3 class="font-display text-xl font-semibold text-white mb-3">Hair Services</h3>
         <ul class="space-y-2 text-gray-400 text-sm mb-4">
-         <li>����� Hair Cut (Men &amp; Women)</li>
+         <li>✂️ Hair Cut (Men &amp; Women)</li>
          <li>• Hair Styling</li>
          <li>• Hair Spa &amp; Smoothening</li>
          <li>• Hair Coloring</li>
@@ -464,7 +464,7 @@
         <ul class="space-y-2 text-gray-400 text-sm mb-4">
          <li>• Beard Styling</li>
          <li>• Professional Shaving</li>
-         <li>�� Head Massage</li>
+         <li>💆 Head Massage</li>
         </ul><button onclick="bookService('Grooming Services')" class="w-full btn-primary px-4 py-3 rounded-lg text-gray-900 font-semibold text-sm"> Book Now </button>
        </div>
       </div><!-- Bridal Services -->
@@ -478,7 +478,7 @@
        <div class="p-6">
         <h3 class="font-display text-xl font-semibold text-white mb-3">Bridal &amp; Special</h3>
         <ul class="space-y-2 text-gray-400 text-sm mb-4">
-         <li>����� Bridal Makeup</li>
+         <li>💄 Bridal Makeup</li>
          <li>• Party Makeup</li>
          <li>• Groom Package</li>
         </ul><button onclick="bookService('Bridal &amp; Special Services')" class="w-full btn-primary px-4 py-3 rounded-lg text-gray-900 font-semibold text-sm"> Book Now </button>
@@ -616,7 +616,7 @@
         <li class="flex justify-between items-center pb-3 border-b border-gray-800"><span class="text-gray-300">Beard Trim &amp; Style</span> <span class="text-gold font-semibold">₹100 - ₹200</span></li>
         <li class="flex justify-between items-center pb-3 border-b border-gray-800"><span class="text-gray-300">Professional Shaving</span> <span class="text-gold font-semibold">₹80 - ₹150</span></li>
         <li class="flex justify-between items-center pb-3 border-b border-gray-800"><span class="text-gray-300">Hair Color</span> <span class="text-gold font-semibold">₹400 - ₹800</span></li>
-        <li class="flex justify-between items-center"><span class="text-gray-300">Groom Package</span> <span class="text-gold font-semibold">₹1500 - ���3000</span></li>
+        <li class="flex justify-between items-center"><span class="text-gray-300">Groom Package</span> <span class="text-gold font-semibold">₹1500 - ₹3000</span></li>
        </ul>
       </div><!-- Women's Services -->
       <div class="bg-darker rounded-2xl p-6 md:p-8 border border-gray-800">
@@ -768,6 +768,84 @@
       </div>
      </div>
     </div>
+   </section><!-- Quick Inquiry Form Section -->
+   <section class="py-16 md:py-24 bg-dark">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6">
+     <div class="text-center mb-12"><span class="text-gold text-xs font-semibold tracking-widest uppercase">Get In Touch</span>
+      <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white mt-3 mb-4">Quick Inquiry</h2>
+      <div class="w-16 h-1 gradient-gold rounded mx-auto"></div>
+      <p class="text-gray-400 mt-4 max-w-2xl mx-auto text-sm">Have a question? Send us a quick message and we'll get back to you shortly.</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"><!-- Left Column - Contact Info -->
+      <div class="bg-darker rounded-2xl p-6 md:p-8 border border-gray-800 flex flex-col justify-center">
+       <h3 class="font-display text-2xl font-semibold text-white mb-6">Why Choose Us?</h3>
+       <div class="space-y-5">
+        <div class="flex items-start gap-4">
+         <div class="w-11 h-11 rounded-xl gradient-gold flex items-center justify-center text-xl flex-shrink-0">
+          ⚡
+         </div>
+         <div>
+          <h4 class="font-semibold text-white mb-1 text-sm">Quick Response</h4>
+          <p class="text-gray-400 text-sm">We respond to all inquiries within 24 hours</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-11 h-11 rounded-xl gradient-gold flex items-center justify-center text-xl flex-shrink-0">
+          👨‍🎨
+         </div>
+         <div>
+          <h4 class="font-semibold text-white mb-1 text-sm">Expert Advice</h4>
+          <p class="text-gray-400 text-sm">Professional consultation for your beauty needs</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-11 h-11 rounded-xl gradient-gold flex items-center justify-center text-xl flex-shrink-0">
+          💰
+         </div>
+         <div>
+          <h4 class="font-semibold text-white mb-1 text-sm">Best Pricing</h4>
+          <p class="text-gray-400 text-sm">Transparent and competitive rates for all services</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-11 h-11 rounded-xl gradient-gold flex items-center justify-center text-xl flex-shrink-0">
+          🏆
+         </div>
+         <div>
+          <h4 class="font-semibold text-white mb-1 text-sm">Quality Guaranteed</h4>
+          <p class="text-gray-400 text-sm">Premium products and exceptional service</p>
+         </div>
+        </div>
+       </div>
+       <div class="mt-8 pt-6 border-t border-gray-800">
+        <p class="text-gray-400 text-sm mb-3">Prefer to call directly?</p><a href="tel:09020469711" class="inline-flex items-center gap-2 text-gold text-lg font-semibold hover:underline"> 📞 09020 469711 </a>
+       </div>
+      </div><!-- Right Column - Inquiry Form -->
+      <div class="bg-darker rounded-2xl p-6 md:p-8 border border-gray-800">
+       <h3 class="font-display text-2xl font-semibold text-white mb-6">Send Your Inquiry</h3>
+       <form id="inquiry-form" class="space-y-4">
+        <div class="grid md:grid-cols-2 gap-4">
+         <div><label for="inquiry-name" class="block text-sm font-semibold text-white mb-2">Your Name *</label> <input type="text" id="inquiry-name" name="name" required class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" placeholder="Enter your name">
+         </div>
+         <div><label for="inquiry-phone" class="block text-sm font-semibold text-white mb-2">Phone Number *</label> <input type="tel" id="inquiry-phone" name="phone" required class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" placeholder="Your phone">
+         </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+         <div><label for="inquiry-email" class="block text-sm font-semibold text-white mb-2">Email (Optional)</label> <input type="email" id="inquiry-email" name="email" class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" placeholder="Your email">
+         </div>
+         <div><label for="inquiry-service-interest" class="block text-sm font-semibold text-white mb-2">Service Interest *</label> <select id="inquiry-service-interest" name="service" required class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white focus:border-gold focus:outline-none transition-colors"> <option value="">Select service...</option> <option value="Hair Services">Hair Services</option> <option value="Skin Services">Skin Services</option> <option value="Grooming">Grooming</option> <option value="Bridal &amp; Special">Bridal &amp; Special</option> <option value="General Inquiry">General Inquiry</option> </select>
+         </div>
+        </div>
+        <div><label for="inquiry-message" class="block text-sm font-semibold text-white mb-2">Your Message *</label> <textarea id="inquiry-message" name="message" rows="4" required class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors resize-none" placeholder="Tell us what you're looking for..."></textarea>
+        </div>
+        <div id="inquiry-success-message" class="hidden bg-gold/20 border border-gold rounded-lg p-4 text-center">
+         <p class="text-gold font-semibold mb-1">✓ Message Sent Successfully!</p>
+         <p class="text-gray-300 text-sm">We'll get back to you as soon as possible.</p>
+        </div><button type="submit" id="submit-inquiry-btn" class="w-full btn-primary px-6 py-4 rounded-full text-gray-900 font-semibold text-base"> Send Inquiry </button>
+       </form>
+      </div>
+     </div>
+    </div>
    </section><!-- Contact Section -->
    <section id="contact" class="py-16 md:py-24 bg-darker">
     <div class="max-w-6xl mx-auto px-5 sm:px-6">
@@ -822,7 +900,9 @@
      </div>
     </div>
    </section><!-- Floating Action Buttons -->
-   <div class="floating-buttons"><button class="floating-btn btn-booking" onclick="bookService('Floating Button Booking')" aria-label="Book Appointment" title="Book Appointment"> 📅 </button> <a href="https://wa.me/919020469711?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment%20at%20Scissors%20Sound%20Salon" target="_blank" rel="noopener noreferrer" class="floating-btn btn-whatsapp" aria-label="WhatsApp" title="WhatsApp Us"> 💬 </a> <a href="tel:09020469711" class="floating-btn btn-call" aria-label="Call Now" title="Call Now"> 📞 </a>
+   <div class="floating-buttons"><button class="floating-btn btn-booking" onclick="bookService('Floating Button Booking')" aria-label="Book Appointment" title="Book Appointment"> 📅 </button> <a href="https://wa.me/919020469711?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment%20at%20Scissors%20Sound%20Salon" target="_blank" rel="noopener noreferrer" class="floating-btn btn-whatsapp" aria-label="WhatsApp" title="WhatsApp Us">
+     <svg viewbox="0 0 24 24" width="28" height="28" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+     </svg></a> <a href="tel:09020469711" class="floating-btn btn-call" aria-label="Call Now" title="Call Now"> 📞 </a>
    </div><!-- Footer -->
    <footer class="bg-darker border-t border-gray-800/50 py-12">
     <div class="max-w-7xl mx-auto px-5 sm:px-6">
@@ -1072,6 +1152,47 @@
         }, 2500);
       }, 500);
     });
+    
+    document.getElementById('inquiry-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById('submit-inquiry-btn');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      
+      const formData = {
+        name: document.getElementById('inquiry-name').value,
+        phone: document.getElementById('inquiry-phone').value,
+        email: document.getElementById('inquiry-email').value,
+        service: document.getElementById('inquiry-service-interest').value,
+        message: document.getElementById('inquiry-message').value
+      };
+      
+      const phoneNumber = '919020469711';
+      const message = `*NEW INQUIRY*%0A%0A` +
+                     `*Name:* ${encodeURIComponent(formData.name)}%0A` +
+                     `*Phone:* ${encodeURIComponent(formData.phone)}%0A` +
+                     (formData.email ? `*Email:* ${encodeURIComponent(formData.email)}%0A` : '') +
+                     `*Service Interest:* ${encodeURIComponent(formData.service)}%0A` +
+                     `*Message:* ${encodeURIComponent(formData.message)}%0A` +
+                     `%0A_From Scissors Sound Website_`;
+      
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+      
+      setTimeout(() => {
+        window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+        
+        document.getElementById('inquiry-success-message').classList.remove('hidden');
+        submitBtn.textContent = 'Send Inquiry';
+        submitBtn.disabled = false;
+        
+        document.getElementById('inquiry-form').reset();
+        
+        setTimeout(() => {
+          document.getElementById('inquiry-success-message').classList.add('hidden');
+        }, 3000);
+      }, 500);
+    });
 
     async function onConfigChange(config) {
       const c = { ...defaultConfig, ...config };
@@ -1201,5 +1322,5 @@
       onConfigChange(defaultConfig);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c67e5a815e03e39',t:'MTc2OTg0ODc1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c67f2d6547f595d',t:'MTc2OTg0OTI5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
