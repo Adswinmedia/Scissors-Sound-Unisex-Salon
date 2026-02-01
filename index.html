@@ -177,6 +177,12 @@
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="/_sdk/element_sdk.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js"></script>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-body bg-darker text-gray-100 overflow-auto">
+  <gmpx-api-loader key="AIzaSyDummyKeyReplace" solution-channel="GMP_QB_locatorplus_v11_cABD"></gmpx-api-loader>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
@@ -504,11 +510,26 @@
       background: rgba(201, 169, 97, 0.4);
       transform: scale(1.1);
     }
+    
+    gmpx-store-locator {
+      width: 100%;
+      height: 100%;
+      --gmpx-color-surface: #1C1C1C;
+      --gmpx-color-on-surface: #f3f4f6;
+      --gmpx-color-on-surface-variant: #9ca3af;
+      --gmpx-color-primary: #C9A961;
+      --gmpx-color-outline: #374151;
+      --gmpx-fixed-panel-width-row-layout: 28.5em;
+      --gmpx-fixed-panel-height-column-layout: 65%;
+      --gmpx-font-family-base: 'Poppins', sans-serif;
+      --gmpx-font-family-headings: 'Cormorant Garamond', serif;
+      --gmpx-font-size-base: 0.875rem;
+      --gmpx-hours-color-open: #10b981;
+      --gmpx-hours-color-closed: #ef4444;
+      --gmpx-rating-color: #C9A961;
+      --gmpx-rating-color-empty: #374151;
+    }
   </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
- </head>
- <body class="h-full font-body bg-darker text-gray-100 overflow-auto">
   <div id="app-wrapper" class="w-full h-full overflow-auto"><!-- Navigation -->
    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-darker/98 backdrop-blur-sm border-b border-gray-800/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -855,7 +876,7 @@
         <li class="flex justify-between items-center pb-3 border-b border-gray-800"><span class="text-gray-300">Hair Styling</span> <span class="text-gold font-semibold">₹400 - ₹800</span></li>
         <li class="flex justify-between items-center pb-3 border-b border-gray-800"><span class="text-gray-300">Hair Spa</span> <span class="text-gold font-semibold">₹600 - ₹1200</span></li>
         <li class="flex justify-between items-center pb-3 border-b border-gray-800"><span class="text-gray-300">Keratin Treatment</span> <span class="text-gold font-semibold">₹2500 - ₹5000</span></li>
-        <li class="flex justify-between items-center pb-3 border-b border-gray-800"><span class="text-gray-300">Party Makeup</span> <span class="text-gold font-semibold">₹1500 - ₹3000</span></li>
+        <li class="flex justify-between items-center pb-3 border-b border-gray-800"><span class="text-gray-300">Party Makeup</span> <span class="text-gold font-semibold">₹1500 - �����3000</span></li>
         <li class="flex justify-between items-center"><span class="text-gray-300">Bridal Makeup</span> <span class="text-gold font-semibold">₹5000 - ₹15000</span></li>
        </ul>
       </div><!-- Facial Services -->
@@ -1068,6 +1089,17 @@
         </div><button type="submit" id="submit-inquiry-btn" class="w-full btn-primary px-6 py-4 rounded-full text-gray-900 font-semibold text-base"> Send Inquiry </button>
        </form>
       </div>
+     </div>
+    </div>
+   </section><!-- Google Maps Locator Section -->
+   <section class="py-16 md:py-24 bg-dark">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6">
+     <div class="text-center mb-12"><span class="text-gold text-xs font-semibold tracking-widest uppercase">Find Us</span>
+      <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white mt-3 mb-4">Our Location</h2>
+      <div class="w-16 h-1 gradient-gold rounded mx-auto"></div>
+      <p class="text-gray-400 mt-4 max-w-2xl mx-auto text-sm">Get directions to Scissors Sound Unisex Salon</p>
+     </div>
+     <div class="bg-darker rounded-2xl overflow-hidden border-2 border-gold/30" style="height: 600px;"><gmpx-store-locator map-id="DEMO_MAP_ID" style="width: 100%; height: 100%;"></gmpx-store-locator>
      </div>
     </div>
    </section><!-- Contact Section -->
@@ -1646,6 +1678,44 @@
     } else {
       onConfigChange(defaultConfig);
     }
+    
+    document.addEventListener('DOMContentLoaded', async () => {
+      await customElements.whenDefined('gmpx-store-locator');
+      const locator = document.querySelector('gmpx-store-locator');
+      if (locator) {
+        const CONFIGURATION = {
+          "locations": [
+            {
+              "title": "SCISSORS SOUND UNISEX SALON",
+              "address1": "Vengalloor, Shappumpady, Thodupuzha",
+              "address2": "Thodupuzha, Kerala 685608, India",
+              "coords": {"lat": 9.8921, "lng": 76.7177},
+              "placeId": "ChIJBxFfXy_DBzsRIpFI0ImskEo"
+            }
+          ],
+          "mapOptions": {
+            "center": {"lat": 9.8921, "lng": 76.7177},
+            "fullscreenControl": true,
+            "mapTypeControl": false,
+            "streetViewControl": true,
+            "zoom": 15,
+            "zoomControl": true,
+            "maxZoom": 20,
+            "mapId": "DEMO_MAP_ID"
+          },
+          "mapsApiKey": "AIzaSyDummyKeyReplace",
+          "capabilities": {
+            "input": true,
+            "autocomplete": true,
+            "directions": true,
+            "distanceMatrix": true,
+            "details": true,
+            "actions": false
+          }
+        };
+        locator.configureFromQuickBuilder(CONFIGURATION);
+      }
+    });
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c72823854c5b2d6',t:'MTc2OTk2MDAyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c72a07b332fb2d6',t:'MTc2OTk2MTI2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
